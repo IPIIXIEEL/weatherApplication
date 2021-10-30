@@ -1,0 +1,59 @@
+.forecast_column {
+    text-align: center;
+}
+
+.sun {
+    color: #fdd255;
+    font-size: 50px;
+}
+
+.cloud {
+    color: #495056;
+    font-size: 50px;
+}
+
+.sunrain {
+    font-size: 100px;
+    color: #495056;
+    display: block;
+}
+
+.temp {
+    font-size: 50px;
+    color: black;
+    display: block;
+}
+
+#celsius-link,
+#celsius-link:visited {
+    text-decoration: none;
+}
+
+#fahrenheit-link,
+#fahrenheit-link:visited {
+    text-decoration: none;
+}
+
+h1 {
+    padding: 0px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Saira Condensed", sans-serif;
+}
+
+body {
+    margin: 100px 200px 100px 200px;
+}
+
+.bg-body {
+    --bs-bg-opacity: 0;
+}
+
+.bg-bodysearch {
+    background-color: rgba(255, 255, 255, 0.2);
+}
