@@ -2,9 +2,91 @@
     text-align: center;
 }
 
-.sun {
-    color: #fdd255;
+#mountain {
+    min-height: 100%;
+    min-width: 781px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+.icons {
+    margin: 10px 0px 0px 0px;
     font-size: 50px;
+}
+
+.footer {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#graphic {
+    margin: 50px 0px 15px 10px;
+}
+
+.os {
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+}
+
+#city {
+    border-radius: 5px;
+    border: 3px solid #6a7a71;
+    padding: 2px;
+    text-align: center;
+}
+
+#searchButton {
+    border-radius: 5px;
+    border: 1px solid #6a7a71;
+    background: #6a7a71;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    transition: all 200ms ease;
+    box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+
+#currentButton {
+    border-radius: 5px;
+    border: 1px solid #6a7a71;
+    background: #6a7a71;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    transition: all 200ms ease;
+    box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+
+#citySearch-form {
+    padding: 20px;
+}
+
+#mainContainer {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: bisque;
+    padding: 20px;
+}
+
+#forecastContainer {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    background-color: bisque;
+    padding: 20px;
+}
+
+#emoji {
+    margin: auto;
 }
 
 .cloud {
@@ -46,14 +128,6 @@ h4 {
     font-family: "Saira Condensed", sans-serif;
 }
 
-body {
-    margin: 100px 200px 100px 200px;
-}
-
-.bg-body {
-    --bs-bg-opacity: 0;
-}
-
-.bg-bodysearch {
-    background-color: rgba(255, 255, 255, 0.2);
+#question {
+    color: #6a7a71;
 }

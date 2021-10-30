@@ -37,7 +37,7 @@ let months = [
 ];
 let month = months[now.getMonth()];
 
-h3.innerHTML = `${day}  ${hours}:${minutes}`;
+h3.innerHTML = `Your local day and time is ${day}  ${hours}:${minutes}`;
 
 //current weather retrieve and show
 
@@ -62,7 +62,7 @@ function showWeather(response) {
     h1.innerHTML = `${response.data.name}`;
     let h2 = document.querySelector("h2");
     let tempNow = Math.round(response.data.main.temp);
-    h2.innerHTML = `It is ${tempNow}°C in ${response.data.name} `;
+    h2.innerHTML = `It is ${tempNow}°C in ${response.data.name} right now `;
     let tempMin = document.querySelector("#low");
     tempMin.innerHTML = `${response.data.main.temp_min}°C`;
     let tempMax = document.querySelector("#high");
