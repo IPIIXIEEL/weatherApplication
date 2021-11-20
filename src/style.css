@@ -1,0 +1,103 @@
+body {
+    font-family: "Courier New", Courier, monospace;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+form {
+    margin: 30px 0px 0px 0px;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+#description {
+    text-transform: capitalize;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+#mainContainer {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: bisque;
+    padding: 20px;
+}
+
+#forecastContainer {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    background-color: bisque;
+    padding: 20px;
+}
+
+#mountain {
+    min-height: 100%;
+    min-width: 781px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+#prec,
+#humi,
+#wind,
+#description {
+    color: black;
+}
+
+#celcius,
+#fahrenheit {
+    position: relative;
+    bottom: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#openSource {
+    text-decoration: none;
+    margin-top: 1px;
+}
+
+.footer {
+    max-width: 600px;
+    margin: auto;
+    line-height: 1;
+}
+
+.tempWeather img {
+    margin-right: 10px;
+}
+
+#temp {
+    font-size: 50px;
+}
+
+#icon {
+    width: 50px;
+    float: center;
+    position: relative;
+    bottom: 15px;
+}
+
+.tempWeather .active {
+    color: black;
+    cursor: default;
+}
+
+.tempWeather .active:hover {
+    text-decoration: none;
+}
