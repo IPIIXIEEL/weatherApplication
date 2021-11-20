@@ -85,8 +85,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
+                    <div class="card" id="forecast" style="width: 50rem;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
                     <div class="card" id="forecastContainer" style="width: 50rem;">
-                        <div class="row">
+                        <div class="row" id="forecast">
                             <div class="col-1">
                                 <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;" id="padForecast">
                                     <div class="card-header">..5 DAY..</div>
@@ -96,11 +104,10 @@
                                 <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
                                     <div class="weather-forecast-date">Mon</div>
 
-                                    <div class="weather-forecast-temp">
-                                        <span class="weather-forecast-min">10°C</span>
-                                        <span class="weather-forecast-max">12°C</span>
+                                    <div class="weather-forecast-temp" id="mon">
+                                        <span id="weather-forecast-min">10°C</span>
+                                        <span id="weather-forecast-max">12°C</span>
                                         <img src="media/weather_icon.svg" id="icon" alt="sun" />
-                                        <p class="card-text"></p>
                                     </div>
                                 </div>
                             </div>
@@ -108,9 +115,9 @@
                                 <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
                                     <div class="weather-forecast-date">Tue</div>
 
-                                    <div class="weather-forecast-temp">
-                                        <span class="weather-forecast-min">10°C</span>
-                                        <span class="weather-forecast-max">12°C</span>
+                                    <div class="weather-forecast-temp" id="tue">
+                                        <span id="weather-forecast-min">10°C</span>
+                                        <span id="weather-forecast-max">12°C</span>
                                         <img src="media/weather_icon.svg" id="icon" alt="sun" />
                                         <p class="card-text"></p>
                                     </div>
@@ -120,9 +127,9 @@
                                 <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
                                     <div class="weather-forecast-date">Wed</div>
 
-                                    <div class="weather-forecast-temp">
-                                        <span class="weather-forecast-min">10°C</span>
-                                        <span class="weather-forecast-max">12°C</span>
+                                    <div class="weather-forecast-temp" id="wed">
+                                        <span id="weather-forecast-min">10°C</span>
+                                        <span id="weather-forecast-max">12°C</span>
                                         <img src="media/weather_icon.svg" id="icon" alt="sun" />
                                         <p class="card-text"></p>
                                     </div>
@@ -131,9 +138,9 @@
                             <div class="col-2">
                                 <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
                                     <div class="weather-forecast-date">Thu</div>
-                                    <div class="weather-forecast-temp">
-                                        <span class="weather-forecast-min">10°C</span>
-                                        <span class="weather-forecast-max">12°C</span>
+                                    <div class="weather-forecast-temp" id="thu">
+                                        <span id="weather-forecast-min">10°C</span>
+                                        <span id="weather-forecast-max">12°C</span>
                                         <img src="media/weather_icon.svg" id="icon" alt="sun" />
                                         <p class="card-text"></p>
                                     </div>
@@ -143,9 +150,9 @@
                                 <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
                                     <div class="weather-forecast-date">Fri</div>
 
-                                    <div class="weather-forecast-temp">
-                                        <span class="weather-forecast-min">10°C</span>
-                                        <span class="weather-forecast-max">12°C</span>
+                                    <div class="weather-forecast-temp" id="fri">
+                                        <span id="weather-forecast-min">10°C</span>
+                                        <span id="weather-forecast-max">12°C</span>
 
                                         <img src="media/weather_icon.svg" id="icon" alt="sun" />
                                         <p class="card-text"></p>

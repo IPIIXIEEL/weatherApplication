@@ -36,6 +36,44 @@ function formatDate(timestamp) {
     let day = days[date.getDay()];
     return ` ${day} ${hours}:${minutes}`;
 }
+
+//forecast testing
+//forecastContainerUpdate
+function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+    let forecastHTML = `<div class="row">`;
+    let days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+    ];
+    days.forEach(function(day) {
+        forecastHTML =
+            forecastHTML +
+            `<div class="col-2">
+                                <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
+                                    <div class="weather-forecast-date">${day}</div>
+
+                                    <div class="weather-forecast-temp" id="mon">
+                                        <span id="weather-forecast-min">7777°C</span>
+                                        <span id="weather-forecast-max">12°C</span>
+                                        <img src="media/weather_icon.svg" id="icon" alt="sun" />
+                                    </div>
+                                </div>
+                            </div>`;
+    });
+
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+}
+
+//end of forecastContainerUpdate
+
 //show weather
 function showWeather(response) {
     let temperatureElement = document.querySelector("#temp");
@@ -104,3 +142,5 @@ fahrenheitLink.addEventListener("click", showF);
 
 let celciusLink = document.querySelector("#celcius");
 celciusLink.addEventListener("click", showC);
+
+displayForecast();

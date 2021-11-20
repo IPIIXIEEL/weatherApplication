@@ -42,6 +42,14 @@ li {
     padding: 20px;
 }
 
+#forecast {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    background-color: bisque;
+    padding: 20px;
+}
+
 #mountain {
     min-height: 100%;
     min-width: 781px;
