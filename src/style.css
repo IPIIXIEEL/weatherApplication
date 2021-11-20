@@ -26,20 +26,50 @@ h3 {
 }
 
 .container-fluid {
+    margin-top: 20px;
     margin-bottom: 10px;
-    padding: 0px;
+}
+
+#mainContainer {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: bisque;
+    padding: 20px;
+    min-height: 28rem;
+    max-width: 50rem;
+    height: 100%;
+}
+
+#forecastContainer {
+    text-align: center;
+    margin: 0 auto;
+    background-color: bisque;
+    padding: 20px;
+}
+
+#forecast {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: bisque;
+    padding: 20px;
+    min-height: 10rem;
+    max-width: 50rem;
 }
 
 #mainText {
     position: relative;
+    height: 15rem;
 }
 
-#forecastContainer {
-    background-color: bisque;
-}
-
-#forecast {
-    background-color: bisque;
+#moreDetails {
+    top: 40px;
+    position: relative;
+    min-height: 10rem;
+    max-width: 50rem;
 }
 
 #mountain {
