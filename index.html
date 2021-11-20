@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap" rel="stylesheet" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <link rel="stylesheet" href="src/style.css" />
@@ -14,67 +18,70 @@
 
 <body>
     <div class="wrapper">
+        <img src="src/mountain.jpg" class="card-img-top" alt="mountain" id="mountain" />
         <div class="container">
             <div class="weatherInterface">
                 <div class="row">
                     <div class="col-12">
                         <div class="card" id="mainContainer" style="width: 50rem;">
-                            <img src="src/mountain.jpg" class="card-img-top" alt="mountain" id="mountain" />
+                            <img src="media/tree_swing.svg" class="img-responsive" id="back-image" />
                             <form id="search-form">
                                 <div class="row">
-                                    <div class="col-4 ">
+                                    <div class="col-6 ">
                                         <input type="search" placeholder="Enter a city.." class="form-control" id="city-input" />
                                     </div>
-                                    <div class="col-4 p-0">
-                                        <input type="submit" value="Search" class="btn btn-primary w-100" />
+                                    <div class="col-6">
+                                        <input type="submit" value="Search" class="btn btn-dark w-100" />
                                     </div>
                                 </div>
                             </form>
-                            <br />
-                            <div class="row">
-                                <div class="col-12">
-                                    <h1 id="city">LOCATION</h1>
-                                    <h3 id="dt">Last Updated</h3>
-                                    <h3 id="lon">lon</h3>
-                                    <h3 id="lat">lat</h3>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class=" tempWeather">
-                                        <img src="media/weather_icon.svg" id="icon" alt="sun" />
 
-                                        <span class="" id="temp">TEMP</span>
-                                        <a href="#" id="celcius" class="active">°C|</a>
-                                        <a href="#" id="fahrenheit">°F</a>
+                            <br />
+
+                            <div id="mainText">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h1 id="city">Location</h1>
+                                        <h3 id="dt">0:00</h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class=" tempWeather">
+                                            <img src="media/placeholder.png" id="icon" alt="sun" />
+                                            <span class="" id="temp">00</span>
+                                            <span id="celcius">°C</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
-                                        <div class="card-header">Description</div>
-                                        <div class="card-body">
-                                            <h5 class="card-title" id="description">...</h5>
-                                            <p class="card-text"></p>
+                            <div id="moreDetails">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
+                                            <div class="card-header">Description</div>
+                                            <div class="card-body">
+                                                <h5 class="card-title" id="description">...</h5>
+                                                <p class="card-text"></p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
-                                        <div class="card-header">Wind</div>
-                                        <div class="card-body">
-                                            <h5 class="card-title" id="wind">°C</h5>
-                                            <p class="card-text"></p>
+                                    <div class="col-4">
+                                        <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
+                                            <div class="card-header">Wind</div>
+                                            <div class="card-body">
+                                                <h5 class="card-title" id="wind">°C</h5>
+                                                <p class="card-text"></p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
-                                        <div class="card-header">Humidity Level</div>
-                                        <div class="card-body">
-                                            <h5 class="card-title" id="humi">%</h5>
-                                            <p class="card-text"></p>
+                                    <div class="col-4">
+                                        <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
+                                            <div class="card-header">Humidity Level</div>
+                                            <div class="card-body">
+                                                <h5 class="card-title" id="humi">%</h5>
+                                                <p class="card-text"></p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -88,86 +95,6 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card" id="forecast" style="width: 50rem;"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card" id="forecastContainer" style="width: 50rem;">
-                        <div class="row" id="forecast">
-                            <div class="col-1">
-                                <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;" id="padForecast">
-                                    <div class="card-header">..5 DAY..</div>
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
-                                    <div class="weather-forecast-date">Mon</div>
-
-                                    <div class="weather-forecast-temp" id="mon">
-                                        <span id="weather-forecast-min">10°C</span>
-                                        <span id="weather-forecast-max">12°C</span>
-                                        <img src="media/weather_icon.svg" id="icon" alt="sun" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
-                                    <div class="weather-forecast-date">Tue</div>
-
-                                    <div class="weather-forecast-temp" id="tue">
-                                        <span id="weather-forecast-min">10°C</span>
-                                        <span id="weather-forecast-max">12°C</span>
-                                        <img src="media/weather_icon.svg" id="icon" alt="sun" />
-                                        <p class="card-text"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
-                                    <div class="weather-forecast-date">Wed</div>
-
-                                    <div class="weather-forecast-temp" id="wed">
-                                        <span id="weather-forecast-min">10°C</span>
-                                        <span id="weather-forecast-max">12°C</span>
-                                        <img src="media/weather_icon.svg" id="icon" alt="sun" />
-                                        <p class="card-text"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
-                                    <div class="weather-forecast-date">Thu</div>
-                                    <div class="weather-forecast-temp" id="thu">
-                                        <span id="weather-forecast-min">10°C</span>
-                                        <span id="weather-forecast-max">12°C</span>
-                                        <img src="media/weather_icon.svg" id="icon" alt="sun" />
-                                        <p class="card-text"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
-                                    <div class="weather-forecast-date">Fri</div>
-
-                                    <div class="weather-forecast-temp" id="fri">
-                                        <span id="weather-forecast-min">10°C</span>
-                                        <span id="weather-forecast-max">12°C</span>
-
-                                        <img src="media/weather_icon.svg" id="icon" alt="sun" />
-                                        <p class="card-text"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-1">
-                                <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;" id="padForecast">
-                                    <div class="card-header">FORECAST</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
