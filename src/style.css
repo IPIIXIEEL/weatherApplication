@@ -25,8 +25,9 @@ h3 {
     text-transform: capitalize;
 }
 
-.container {
-    margin: 0 auto;
+.container-fluid {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 #mainContainer {
@@ -34,27 +35,29 @@ h3 {
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 10px;
-    width: 100%;
     background-color: bisque;
     padding: 20px;
-    height: 28rem;
+    min-height: 28rem;
+    max-width: 50rem;
+    height: 100%;
 }
 
 #forecastContainer {
     text-align: center;
     margin: 0 auto;
-    width: 100%;
     background-color: bisque;
     padding: 20px;
 }
 
 #forecast {
-    text-align: center;
     margin: 0 auto;
-    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
     background-color: bisque;
     padding: 20px;
-    height: 10rem;
+    min-height: 10rem;
+    max-width: 50rem;
 }
 
 #mainText {
@@ -65,7 +68,8 @@ h3 {
 #moreDetails {
     top: 40px;
     position: relative;
-    height: 20rem;
+    min-height: 10rem;
+    max-width: 50rem;
 }
 
 #mountain {

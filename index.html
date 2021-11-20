@@ -19,11 +19,11 @@
 <body>
     <div class="wrapper">
         <img src="src/mountain.jpg" class="card-img-top" alt="mountain" id="mountain" />
-        <div class="container">
+        <div class="container-fluid">
             <div class="weatherInterface">
                 <div class="row">
                     <div class="col-12">
-                        <div class="card" id="mainContainer" style="width: 50rem;">
+                        <div class="card" id="mainContainer">
                             <img src="media/explore.svg" class="img-responsive" id="back-image" />
                             <form id="search-form">
                                 <div class="row">
@@ -38,7 +38,7 @@
 
                             <br />
 
-                            <div id="mainText">
+                            <div class="container-fluid" id="mainText">
                                 <div class="row">
                                     <div class="col-12">
                                         <h1 id="city">Location</h1>
@@ -55,10 +55,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="moreDetails">
+
+                            <div class="container-fluid" id="moreDetails">
                                 <div class="row">
-                                    <div class="col-4">
-                                        <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
+                                    <div class="col-sm-4">
+                                        <div class="card text-dark bg-warning mb-3">
                                             <div class="card-header">Description</div>
                                             <div class="card-body">
                                                 <h5 class="card-title" id="description">...</h5>
@@ -66,8 +67,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-4">
-                                        <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
+                                    <div class="col-sm-4">
+                                        <div class="card text-dark bg-warning mb-3">
                                             <div class="card-header">Wind</div>
                                             <div class="card-body">
                                                 <h5 class="card-title" id="wind">°C</h5>
@@ -75,8 +76,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-4">
-                                        <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
+                                    <div class="col-sm-4">
+                                        <div class="card text-dark bg-warning mb-3">
                                             <div class="card-header">Humidity Level</div>
                                             <div class="card-body">
                                                 <h5 class="card-title" id="humi">%</h5>
@@ -91,10 +92,10 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
-                    <div class="card" id="forecast" style="width: 50rem;"></div>
+                <div class="col-sm-12">
+                    <div class="card" id="forecast"></div>
                 </div>
             </div>
         </div>
